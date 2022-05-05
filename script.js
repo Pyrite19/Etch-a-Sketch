@@ -8,6 +8,9 @@ var columnNum;
 btn.addEventListener("click", () => {
 	clearGrid();
 	rowNum = Number(prompt("Enter grid size"));
+	if (rowNum > 100) {
+		alert("Grid size too large!");
+	}
     columnNum = rowNum
 	grid(rowNum, columnNum);
 });
